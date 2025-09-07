@@ -6,6 +6,14 @@
     <title>Personal Budget</title>
     <meta name="description" content="A free personal budger app">
     <meta name="keywords" content="app free budget finance">
+    <!-- SEO Change 1: Author -->
+    <meta name="author" content="Fabio Nolasco">
+
+    <!-- SEO Change 2: Open Graph title -->
+    <meta property="og:title" content="Personal Budget - Free Budget Finance App">
+
+    <!-- SEO Change 3: Canonical link -->
+    <link rel="canonical" href="http://64.227.111.250/">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -13,14 +21,19 @@
 
 <a href="#main" class="skip">Skip to content</a>
 
-    <nav>
-        <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
-        </ul>
-    </nav>
+    <!-- Semantic HTML Change 1: Header -->
+    <header>
+      <nav>
+          <ul>
+              
+              <!-- A11y Change 1: Indicate current page -->
+              <li><a href="./" aria-current="page">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./login.html">Login</a></li>
+              <li><a href="https://google.com">Google</a></li>
+          </ul>
+      </nav>
+    </header>
 
     <div class="hero">
         <h1>Personal Budget</h1>
@@ -29,7 +42,16 @@
 
     <main class="center" id="main">
 
-        <div class="page-area">
+        <!-- Semantic HTML Change 2: Add aside-->
+        <aside>
+            <p><strong>Tip:</strong> Update your budget weekly for best results.</p>
+        </aside>
+
+        <!-- A11y Change 2: Different language text -->
+        <p>The budget app text in French: <span lang="fr">Gestion budgétaire personnelle</span></p>
+
+        <!-- Semantic HTML Change 3: Use section -->      
+        <section class="page-area">
 
             <article>
                 <h1>Stay on track</h1>
@@ -91,11 +113,12 @@
             <article>
                 <h1>Chart</h1>
                 <p>
-                    <canvas id="myChart" width="400" height="400"></canvas>
+                    <!-- A11y Change 3: Add aria-label -->
+                    <canvas id="myChart" width="400" height="400" aria-label="Budget chart" role="img"></canvas>
                 </p>
             </article>
 
-        </div>
+        </section>
 
     </main>
 
@@ -103,6 +126,11 @@
         <div class="center">
             All rights reserved &copy; Fabio Nolasco
         </div>
+        
+        <!-- Semantic HTML Change 4: Add address -->
+        <address>
+            Contact: <a href="mailto:evo@kayembe.com">evo@kayembe.com</a>
+        </address>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
